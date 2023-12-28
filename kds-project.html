@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Finansal Karar Destek Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Finansal Analiz ve Planlama</h1>
+        <form id="financeForm">
+            <h2>Aylık Gelir ve Giderler</h2>
+            <!-- Aylık gelir ve giderler için input alanları -->
+            <!-- Örnek olarak 5 ay alınıyor, istenirse sayı arttırılabilir -->
+            <div class="monthly-data">
+                <!-- Gelirler -->
+                <div class="income-data">
+                    <h3>Gelirler</h3>
+                    <input type="number" id="incomeJan" placeholder="Ocak Geliri">
+                    <input type="number" id="incomeFeb" placeholder="Şubat Geliri">
+                    <input type="number" id="incomeMar" placeholder="Mart Geliri">
+                    <input type="number" id="incomeApr" placeholder="Nisan Geliri">
+                    <input type="number" id="incomeMay" placeholder="Mayıs Geliri">
+                    <!-- Daha fazla ay için inputlar eklenebilir -->
+                </div>
+                <!-- Giderler -->
+                <div class="expenses-data">
+                    <h3>Giderler</h3>
+                    <input type="number" id="expensesJan" placeholder="Ocak Gideri">
+                    <input type="number" id="expensesFeb" placeholder="Şubat Gideri">
+                    <input type="number" id="expensesMar" placeholder="Mart Gideri">
+                    <input type="number" id="expensesApr" placeholder="Nisan Gideri">
+                    <input type="number" id="expensesMay" placeholder="Mayıs Gideri">
+                    <!-- Daha fazla ay için inputlar eklenebilir -->
+                </div>
+            </div>
+            <button type="button" onclick="calculateFinances()">Hesapla</button>
+        </form>
+        <div id="results">
+            <!-- Hesaplama sonuçları burada güncellenecek -->
+        </div>
+        <div id="financialCharts">
+            <canvas id="incomeExpenseChart"></canvas>
+            <canvas id="savingsChart"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
