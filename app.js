@@ -157,12 +157,6 @@ function drawFinancialCharts(incomeData, expensesData) {
   });
 }
 
-// Formdaki kullanıcı girdilerini alarak finansal hesaplamalar yapar ve sonuçları günceller.
-function calculateFinances() {
-  const { income, expenses } = getMonthlyData();
-  drawFinancialCharts(income, expenses);
-}
-
 // Form 'submit' olayını dinler ve sayfa yenilenmesini engelleyerek hesaplamaları tetikler.
 document.getElementById("financeForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Formun kendi 'submit' olayını engeller
